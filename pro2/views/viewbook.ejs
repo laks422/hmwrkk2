@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm navbar-dark" style=" background-color: green;">
+
+               
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Add books</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/addbook">View books</a>
+                  </li>
+                  
+                </ul>
+              
+              </nav>
+            <div class="container"></div>
+                                                             
+                        <% for(var i=0;i<Books.length;i++){ %>
+                            <div class="card"> 
+                            <div class="card-body">
+                       <div class="form row">Title:<p class="card-text"><%= Books[i].title %></p></div>
+                       <div class="form row">Author:<p class="card-text"><%= Books[i].author %></p></div>
+                        <div class="form row"> Publisher:<p class="card-text"><%= Books[i].publisher %></p></div>
+                            <div class="form row"> Publication:<p class="card-text"><%= Books[i].date_of_publication %></p></div>
+                                <div class="form row">Distributor:<p class="card-text"><%= Books[i].distributor %></p></div>
+                                    <div class="form row">Price:<p class="card-text"><%= Books[i].price %></p></div>
+                                        <div class="form row">Description:<p class="card-text"><%= Books[i].Description %></p></div>
+                            </div>
+                        </div>
+                       <% } %>
+                    </div>
+                    </div>     
+                    
+                    </div>     
+        
+</body>
+</html>
